@@ -1,0 +1,128 @@
+*{
+    text-decoration: none;
+    color: #000000;
+    font-family:sans-serif;
+}
+body{
+    height: 100%;
+    /*background: red;*/
+}
+#top{
+    position: fixed;
+    z-index: 1;
+    height: 110px;
+    width: 100%;
+    margin: -8px;
+    padding: 5px;
+    
+    background: linear-gradient(#F1F1F4, #FFFFFF) fixed;
+}
+/*#T{*/
+/*    transition-property: ease-in;*/
+/*    transition-duration: 3s;*/
+/*}*/
+#title{
+    /*position: absolute;*/
+    width: auto;
+}
+#navtop{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    background: linear-gradient(#123456, #AFAFB3);
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+#navtop ul li{
+    display: inline-block;
+    height: 16px;
+    width:  250px;
+    padding: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:transparent;
+    /*margin-bottom: 12px;*/
+}
+#navtop ul li:hover{
+    background: inherit;
+    border-style: solid;
+    border-color: #484848;
+    border-radius: 4px;
+    background: linear-gradient(#AFAFB3, #123456);
+}
+#navtop ul li:before{
+    content:"> ";
+    color: #FFFFFF;
+    visibility: hidden;
+}
+#navtop ul li:hover:before{
+    content: "> ";
+    visibility: visible;
+    color: #ABCDEF;
+    transform: rotatey(720deg);
+    transition-duration: 1s;
+}
+#navtop ul li:after{
+    content:" <";
+    color: #FFFFFF;
+    visibility: hidden;
+}
+#navtop ul li:hover:after{
+    content:" <";
+    visibility: visible;
+    color: #ABCDEF;
+    transform: rotatey(-360deg);
+    transition-duration: 1s;
+}
+#navtop ul > ul:hover{
+    /*background: linear-gradient(#123456, #AFAFB3);*/
+    color: red;
+}
+#navtop ul li a{
+    font-size: 14px;
+    color: #FFFFFF;
+    left: 0;
+}
+#navtop ul ul{
+    z-index: 10;
+    float: left;
+    display: block;
+    visibility: hidden;
+    background: linear-gradient(#AFAFB3, #123456);
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+#navtop ul li:hover ul{
+    /*display: block;*/
+    position: absolute;
+    visibility: visible;
+    height: auto;
+    transition-property: height;
+    transition-duration: 5s;
+}
+#navtop ul ul li{
+    display: block;
+    height: 16px;
+    width:  250px;
+    background: inherit;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #484848;
+    border-radius: 4px;
+    margin-left: -7px;
+    margin-bottom: -2px;
+    padding: 5px;
+    transition: all ease-in-out;
+    transition: visibility 0;
+}
+#navtop ul ul li{
+    background: linear-gradient(#123456, #AFAFB3);
+}
+#iframe{
+    width: 99%;
+    margin-top: 120px;
+    padding: 0;
+    position: block;
+    border-style: hidden;
+}
