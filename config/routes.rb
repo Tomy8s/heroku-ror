@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'posts/create'
+
+  get 'posts/edit'
+
+  get 'posts/update'
+
+  get 'posts/show'
+
+  get 'posts/index'
+
+  get 'posts/create'
+
+  get 'posts/edit'
+
+  get 'posts/update'
+
+  get 'posts/show'
+
   get 'home/welcome'
    root 'home#welcome'
    resources :users
