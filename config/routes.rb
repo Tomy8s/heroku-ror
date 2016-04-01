@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'projects/index'
-  match 'projects#index' => 'projects'
 
   get 'projects/fourletters'
 
