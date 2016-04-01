@@ -143,3 +143,12 @@ body{
 #content{
     color: #123456;
 }
+#footer{
+    background: linear-gradient(#FFFFFF, #F1F1F4) fixed;
+    width: 99%;
+    position: absolute;
+    bottom: 0;
+}
+#footer p{
+    text-align: center;
+}
