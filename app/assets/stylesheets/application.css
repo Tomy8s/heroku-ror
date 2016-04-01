@@ -133,20 +133,13 @@ body{
 #navtop ul ul li{
     background: linear-gradient(#123456, #AFAFB3);
 }
-#iframe{
-    width: 99%;
-    margin-top: 120px;
-    padding: 0;
-    position: block;
-    border-style: hidden;
-}
-#content{
-    color: #123456;
+#main{
+    margin-bottom: 50px;
 }
 #footer{
     background: linear-gradient(#FFFFFF, #F1F1F4) fixed;
     width: 99%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 #footer p{
