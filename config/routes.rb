@@ -1,5 +1,41 @@
 Rails.application.routes.draw do
-  get 'projects/index'
+  get 'about' => 'about#about'
+
+  get 'learning/academia'
+
+  get 'learning/computing'
+
+  get 'learning/other'
+
+  namespace :tefl do
+  get 'links/index'
+  end
+
+  namespace :tefl do
+  get 'links/create'
+  end
+
+  namespace :tefl do
+  get 'links/new'
+  end
+
+  namespace :tefl do
+  get 'links/destroy'
+  end
+
+  namespace :tefl do
+  get 'links/edit'
+  end
+
+  namespace :tefl do
+  get 'links/show'
+  end
+
+  namespace :tefl do
+  get 'links/update'
+  end
+
+  get 'projects' => 'projects#index'
 
   get 'projects/fourletters'
 
@@ -22,7 +58,8 @@ Rails.application.routes.draw do
   get 'posts/show'
 
   get 'home/welcome'
-   root 'home#welcome'
+  
+  root 'home#welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

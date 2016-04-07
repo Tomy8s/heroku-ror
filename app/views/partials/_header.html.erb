@@ -9,37 +9,40 @@
 <body>
     <div id="top">
         <header id="titlebox">
-            <h1 id="title"><span id="T">T</span><span id="o">o</span><span id="m">m</span><span id="apo">'</span><span id="s">s </span><span id="S">S</span><span id="i">i</span><span id="t">t</span><span id="e">e</span></h1>
+            <h1 id="title"><%= link_to 'Tom\'s Site', root_path %></span></h1>
         </header>
         <nav id="navtop">
             <ul>
                 <li>
-                    <a href="./about_me.html" target="iframe">About me</a>
+                    <%= link_to "About me", about_path %>
                 </li>
+                <br class="mob">
                 <li>
-                    <a href="./TEFL.html" target="iframe">TEFL</a>
+                    <%= link_to "TEFL", tefl_links_index_path %>
                 </li>
+                <br class="mob">
                 <li>
-                    <a href="./learning.html" target="iframe">Learning</a>
+                    <%= link_to "Learning", learning_academia_path %>
                     <ul>
                         <li>
-                            <a href=./learning/acadaemia.html target="iframe">Academia</a>
+                            <%= link_to "Academia", learning_academia_path %>
                         </li>
                         <li>
-                            <a href="./learning/computing.html" target="iframe">Computing and IT</a>
+                            <%= link_to "Computing", learning_computing_path %>
                         </li>
                         <li>
-                            <a href="./learning/misc.html" target="iframe">Other learning acheivements</a>
+                            <%= link_to "Other achievements", learning_other_path %>
                         </li>
                     </ul><!--Learning-->
                 </li>
+                <br class="mob">
                 <li>
-                    <a href="./projects.html" target="iframe">Projects</a>
+                    <%= link_to "Projects", projects_path %>
                     <ul>
                       <li>
                         <%= link_to "4 letters", projects_fourletters_path %>
                       </li>
-                        <li>
+                        <!--<li>
                             <a href="./projects/maths/maths.html" target="iframe">Maths</a>
                         </li>
                         <li>
@@ -47,7 +50,7 @@
                         </li>
                         <li>
                             <a href="./projects/game_of_life/game_of_life.html" target="iframe">Conway's Game of Life</a>
-                        </li>
+                        </li>-->
                     </ul>
                 </li><!--Projects-->
             </ul><!--All items-->

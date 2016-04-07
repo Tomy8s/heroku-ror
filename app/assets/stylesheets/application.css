@@ -145,3 +145,15 @@ body{
 #footer p{
     text-align: center;
 }
+.mob{
+    display: none;
+}
+@media (max-width: 576px){
+    #navtop{
+        height: auto;
+        width: auto;
+    }
+    .mob{
+        display: block;
+    }    
+}

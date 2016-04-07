@@ -1,0 +1,2 @@
+module Tefl::LinksHelper
+end
