@@ -136,13 +136,13 @@ body{
 #main{
     margin-bottom: 50px;
 }
-#footer{
+footer{
     background: linear-gradient(#FFFFFF, #F1F1F4) fixed;
     width: 99%;
     position: fixed;
     bottom: 0;
 }
-#footer p{
+footer p{
     text-align: center;
 }
 .mob{

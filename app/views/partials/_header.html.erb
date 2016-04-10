@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div id="top">
@@ -40,20 +41,20 @@
                     <%= link_to "Projects", projects_path %>
                     <ul>
                       <li>
-                        <%= link_to "4 letters", projects_fourletters_path %>
+                        <%= link_to "Four letters", projects_fourletters_path %>
                       </li>
-                        <!--<li>
-                            <a href="./projects/maths/maths.html" target="iframe">Maths</a>
+                        <li>
+                            <a href="http://typhp.herokuapp.com/projects/maths_init.php">Maths</a>
                         </li>
                         <li>
-                            <a href="./projects/calendar/calendar.php" target="iframe">Calendar</a>
+                            <a href="http://typhp.herokuapp.com/projects/calendar.php">Calendar</a>
                         </li>
                         <li>
-                            <a href="./projects/game_of_life/game_of_life.html" target="iframe">Conway's Game of Life</a>
-                        </li>-->
+                            <a href="http://typhp.herokuapp.com/projects/game_of_life_init.php">Conway's Game of Life</a>
+                        </li>
                     </ul>
                 </li><!--Projects-->
             </ul><!--All items-->
         </nav><!--Navtop-->
     </div><!--Top-->
-    <div id="main">
+    <main>
