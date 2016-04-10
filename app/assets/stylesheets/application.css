@@ -31,10 +31,6 @@ body{
     padding: 5px;
     background: linear-gradient(#F1F1F4, #FFFFFF) fixed;
 }
-/*#T{*/
-/*    transition-property: ease-in;*/
-/*    transition-duration: 3s;*/
-/*}*/
 #title{
     /*position: absolute;*/
     width: auto;
@@ -47,6 +43,9 @@ body{
     color: #FFFFFF;
     border-radius: 10px;
 }
+#navtop ul{
+    padding: 0;
+}
 #navtop ul li{
     display: inline-block;
     height: 16px;
@@ -55,7 +54,6 @@ body{
     border-width: 2px;
     border-style: solid;
     border-color:transparent;
-    /*margin-bottom: 12px;*/
 }
 #navtop ul li:hover{
     background: inherit;
@@ -87,10 +85,6 @@ body{
     color: #ABCDEF;
     transform: rotatey(-360deg);
     transition-duration: 1s;
-}
-#navtop ul > ul:hover{
-    /*background: linear-gradient(#123456, #AFAFB3);*/
-    color: red;
 }
 #navtop ul li a{
     font-size: 14px;
@@ -126,14 +120,14 @@ body{
     border-radius: 4px;
     margin-left: -7px;
     margin-bottom: -2px;
-    padding: 5px;
+    /*padding: 5px;*/
     transition: all ease-in-out;
     transition: visibility;
 }
 #navtop ul ul li{
     background: linear-gradient(#123456, #AFAFB3);
 }
-#main{
+main{
     margin-bottom: 50px;
 }
 footer{
@@ -153,7 +147,19 @@ footer p{
         height: auto;
         width: auto;
     }
+    #navtop ul li{
+        /*margin-left: 0;*/
+        width: 100%;
+        margin: 0;
+    }
+    #navtop ul ul li{
+        /*margin-left: 0;*/
+        width: 100%;
+    }
     .mob{
         display: block;
-    }    
+    }
+    main{
+    margin-top: 100px;
+    }
 }
