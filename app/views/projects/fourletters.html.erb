@@ -1,4 +1,4 @@
-    <h4><u>How to play</u></h4><br>
+    <h4><u>How to play</u></h4>
     <p>
         I've thought of a word. My word has four letters. Your task is to guess my word. Every time you make a guess I'll tell you how many of the letters in your word are <b>R</b>ight, but in the <b>W</b>rong place in the first column, and how many are <b>R</b>ight and in the <b>R</b>ight place in the second column.
     </p>
@@ -7,11 +7,11 @@
     </P>
         Guess the word: <input type="text" id="guess" maxlength="4" onchange="play()" autofocus>
         <button onclick="play()">Guess!</button><span class="mob">Press enter on your keyboard to guess.</span>
-    <table>
+    <table id="fourlettertable">
         <thead>
             <tr>
-                <th>R, W</th>
-                <th>R, R</th>
+                <th>Right letter <br>Wrong place</th>
+                <th>Right letter <br>Right place</th>
                 <th>Guess</th>
             </tr>
         </thead>
@@ -19,4 +19,3 @@
             
         </tbody>
     </table>
-    <script src="assets/fourletters.js"></script>

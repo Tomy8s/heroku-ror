@@ -2,15 +2,17 @@
 <html>
 <head>
   <title>Tom's site</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div id="top">
-        <header id="titlebox">
+        <header>
             <h1 id="title"><%= link_to 'Tom\'s Site', root_path %></span></h1>
+        <div id="user">
+        </div>
         </header>
         <nav id="navtop">
             <ul>

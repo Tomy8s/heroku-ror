@@ -1,0 +1,18 @@
+<h1>Registration</h1>
+
+<p>
+  Please complete the fields below. An asterisk (*) indicates a required field.
+</P>
+<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f|  %>
+    <table>
+        <tr><td>First name:</td><td><%=f.text_field :fname%></td></tr>
+        <tr><td>Surname:</td><td><%=f.text_field :sname%></td></tr>
+        <tr><td>Gender:</td><td><%=f.text_field :gender%></span></td></tr>
+        <tr><td>Username*:</td><td><%=f.text_field :uname%></td></tr>
+        <tr><td>Password*:</td><td><%=f.password_field :password_digest%></td></tr>
+        <tr><td>Confirm*:</td><td><%=f.password_field :password_digest%></td></tr>
+        <tr><td>Email:</td><td><%=f.email_field :email%></td></tr>
+        <tr><td>Date of birth:</td><td><%=f.date_field :dob%></td></tr>
+        <tr><td></td><td><input type="submit"></td></tr>
+    </table>
+<%end%>

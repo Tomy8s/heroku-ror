@@ -33,6 +33,10 @@ function play() {
         rrcell.appendChild(rrval);
         gucell.appendChild(guval);
         
+        rwcell.className = 'rw';
+        rrcell.className = 'rr';
+        gucell.className = 'gu';
+        
         row.appendChild(rwcell);
         row.appendChild(rrcell);
         row.appendChild(gucell);

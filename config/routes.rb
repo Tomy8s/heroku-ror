@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  get 'users/admin'
+  
+  get 'users/login'
+  
+  get 'users/loggingin'
+  
+  get 'users/profile'
+  
+  get 'users/register'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  get 'users/activity'
+
+  get 'users/profile'
+
+  get 'users/activity'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/delete'
+
   get 'about' => 'about#about'
 
   get 'learning/academia'
@@ -60,6 +88,8 @@ Rails.application.routes.draw do
   get 'home/welcome'
   
   root 'home#welcome'
+  
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

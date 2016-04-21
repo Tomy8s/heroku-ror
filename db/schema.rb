@@ -11,62 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401091628) do
+ActiveRecord::Schema.define(version: 20160417120214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.integer  "post_id"
+  create_table "tefls", force: :cascade do |t|
     t.integer  "user_id"
-    t.text     "comment"
-    t.integer  "likes"
-    t.integer  "dislikes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "link"
+    t.text     "description"
+    t.integer  "visited"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
-
-  create_table "posts", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "post_no"
-    t.string   "title"
-    t.text     "body"
-    t.integer  "views"
-    t.integer  "likes"
-    t.integer  "dislikes"
-    t.integer  "comments"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  add_index "tefls", ["user_id"], name: "index_tefls_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",      limit: 15
-    t.string   "last_name",       limit: 15
-    t.date     "d_o_b"
-    t.integer  "age"
-    t.boolean  "male"
-    t.string   "email",           limit: 63
-    t.string   "location",        limit: 31
-    t.decimal  "timezone"
-    t.string   "username",        limit: 15
+    t.string   "fname"
+    t.string   "sname"
     t.string   "password_digest"
-    t.boolean  "online"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "salt"
+    t.date     "dob"
+    t.string   "gender"
+    t.string   "status"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "email"
+    t.string   "uname"
   end
 
-  add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "users"
-  add_foreign_key "posts", "users"
+  add_foreign_key "tefls", "users"
 end
