@@ -1,2 +1,10 @@
-<h1>Tefl::Links#index</h1>
-<p>Find me in app/views/tefl/links/index.html.erb</p>
+<h1>Useful Sites for English Learners</h1>
+
+<% @link.each do |l| %>
+<div class="link">
+  <h3><%= l.name %></h3>
+  <a href="<%= l.link %>">Go to site</a>
+  <p><%= l.description %></p>
+  <p class="created">Uploaded: <%= l.created_at %></p>
+</div>
+<% end %>
