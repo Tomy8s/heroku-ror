@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   end
 
   namespace :tefl do
-  get 'links/create'
+  post 'links/create'
   end
 
   namespace :tefl do

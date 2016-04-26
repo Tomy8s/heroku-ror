@@ -1,2 +1,7 @@
-<h1>Tefl::Links#new</h1>
-<p>Find me in app/views/tefl/links/new.html.erb</p>
+<h1>Add a link</h1>
+<%= form_for @new, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  Name of link:<%= f.text_field :name %>
+  Link address:<%= f.text_field :link %>
+  Description:<%= f.text_area :description %>
+  <%= f.submit %>
+<% end %>
