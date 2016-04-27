@@ -8,19 +8,19 @@ main form{
     line-height: 2em;
     display: block;
 }
-main table{
+main form table{
     margin: 0 auto;    
 }
-main  tr td:first-child{
+main form tr td:first-child{
     text-align: right;
 }
-main input{
+main form input{
     border: 15px solid #484848;
     border-radius: 15px;
     background-color: #484848;
     color: #FFFFFF;
 }
-main .txtlen{
+main form input[text], textarea{
     width: 300px;    
 }
 main input[type=radio]{

@@ -147,6 +147,13 @@ h1{
     transition:all ease-in-out;
     transition:visibility;
 }
+.glob{
+    border: 15px solid #004800;
+    border-radius: 15px;
+    background-color: #004800;
+    color: #FFFFFF;
+    margin: 5px;
+}
 main{
     margin-bottom:50px;
 }
@@ -159,6 +166,41 @@ main .blob{
 }
 main a:hover{
     text-decoration: underline;
+}
+main form{
+    line-height: 2em;
+    display: block;
+}
+main form table{
+    margin: 0 auto;    
+}
+main form tr td:first-child{
+    text-align: right;
+}
+main input, textarea{
+    width: 300px;
+    border: 15px solid #484848;
+    border-radius: 15px;
+    background-color: #484848;
+    color: #FFFFFF;  
+}
+main .blob input, textarea{
+    border: 15px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #484848;  
+}
+main .blob input[type="submit"]{
+    display: block;
+    width: auto;
+    margin: auto;
+}
+main input[type=radio]{
+    width: 26px;
+    height: 26px;
+}
+main #submit{
+    width: 150px;
+    margin: 0 auto;
 }
 #sums{
     font-size:28px;

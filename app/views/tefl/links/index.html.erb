@@ -1,14 +1,19 @@
 <h1>Useful Sites for English Learners</h1>
 
-<div class="blob">
-  <h3><a href="https://www.youtube.com/watch?v=gZzKe1BC2XU">Fluency MC&#39;s Irregular Verb Rap</a></h3>
-  <a href="https://www.youtube.com/watch?v=gZzKe1BC2XU">Go to site</a>
-  <p>Watch, listen and learn as Fluency MC raps some irregular verbs, some of which are more useful than others</p>
-  <p class="created">Uploaded: 2016-04-24 19:23:32 UTC</p>
-</div>
-<div class="blob">
-  <h3><a href="http://www.bbc.com/news">BBC News</a></h3>
-  <a href="http://www.bbc.com/news">Go to site</a>
-  <p>This is a link to BBC News.</p>
-  <p class="created">Uploaded: 2016-04-24 18:31:13 UTC</p>
-</div>
+<% @link.each do |l| %>
+  <div class="blob">
+    <h3><%= link_to l.name, l.link %></h3>
+    <%= link_to "Go to site", l.link %>
+    <p><%= l.description %></p>
+    <p class="created">Uploaded: <%= l.created_at %></p>
+  </div>
+<% end %>
+<h1>Add a link</h1>
+<%= form_for @new, url: {action: "create"}, html: {class: "blob"} do |f| %>
+<table>
+  <tr><td>Name of link:</td><td><%= f.text_field :name %></td></tr>
+  <tr><td>Link address:</td><td><%= f.text_field :link, value: "http://" %></td></tr>
+  <tr><td>Description:</td><td><%= f.text_area :description %></td></tr>
+</table>
+  <%= f.submit "Add link" %>
+<% end %>

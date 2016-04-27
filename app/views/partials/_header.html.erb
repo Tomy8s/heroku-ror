@@ -60,8 +60,6 @@
         </nav><!--Navtop-->
     </div><!--Top-->
     <% if flash[:notice] %>
-      <% flash[:notice].each do |notice| %>
-        <div class="notice"> <%= notice %> </div>
-      <% end %>
+        <div class="glob"> <%= flash[:notice] %> </div>
     <% end %>
     <main>

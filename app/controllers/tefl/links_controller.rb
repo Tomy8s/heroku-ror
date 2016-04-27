@@ -10,9 +10,9 @@ class Tefl::LinksController < ApplicationController
   end
   
   def create
-    @new = Tefl.new(params[:tefl])
+    @new = Tefl.new(tefl_params)
     if @new.save
-        redirect_to tefl_index_path
+        redirect_to tefl_links_index_path
         flash[:notice] = "Thank you. Your link has been added."
       else
         render "new"

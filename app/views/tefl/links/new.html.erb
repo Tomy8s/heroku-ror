@@ -1,7 +1,9 @@
 <h1>Add a link</h1>
-<%= form_for @new, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  Name of link:<%= f.text_field :name %>
-  Link address:<%= f.text_field :link %>
-  Description:<%= f.text_area :description %>
-  <%= f.submit %>
+<%= form_for @new, url: {action: "create"}, html: {class: "blob"} do |f| %>
+<table>
+  <tr><td>Name of link:</td><td><%= f.text_field :name %></td></tr>
+  <tr><td>Link address:</td><td><%= f.text_field :link, value: "http://" %></td></tr>
+  <tr><td>Description:</td><td><%= f.text_area :description %></td></tr>
+</table>
+  <%= f.submit "Add link" %>
 <% end %>
