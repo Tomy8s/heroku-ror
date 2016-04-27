@@ -1,2 +1,15 @@
-<h1>Learning#computing</h1>
-<p>Find me in app/views/learning/computing.html.erb</p>
+<h1>Computing learning</h1>
+
+<P>
+  Bellow you can find a list of the various different courses I've taken and what I've learnt from them.
+</P>
+
+<% @course.each do |c| %>
+  <div class="blob">
+    <h2><%= link_to c.name, c.link %></h2>
+    <h5>at <%= c.site %></h5>
+    <p><%= c.description %></p>
+    <p>My rating: <%= c.rating %>/5</p>
+    <P>My progress: <%= c.complete %>%</P>
+  </div>
+<% end %>
