@@ -19,7 +19,11 @@
 }
 body{
     height:100%;
+    background:linear-gradient(#F1F1F4, #fff) fixed;
 }
+/*h1, h2, h3, h4, h5, h6, p{*/
+/*    margin: 0.5em;*/
+/*}*/
 p{
     font-size: 16px;
 }
@@ -42,7 +46,6 @@ h1{
     margin:-8px;
     margin-bottom: 0;
     padding:5px;
-    background:linear-gradient(#F1F1F4, #fff) fixed;
 }
 #title{
     display:inline-block;
@@ -147,7 +150,7 @@ h1{
     transition:all ease-in-out;
     transition:visibility;
 }
-.glob{
+.notice{
     border: 15px solid #004800;
     border-radius: 15px;
     background-color: #004800;
@@ -157,12 +160,18 @@ h1{
 main{
     margin-bottom:50px;
 }
-main .blob{
-    border: 15px solid #484848;
+.blob{
+    padding: 10px;
     border-radius: 15px;
-    background-color: #484848;
+    background:linear-gradient(#123456, #9F9FA3);
     color: #FFFFFF;
     margin: 5px;
+}
+.blob :first-child{
+    margin-top: 0;
+}
+.blob :last-child{
+    margin-bottom: 0;
 }
 main a:hover{
     text-decoration: underline;
@@ -232,7 +241,7 @@ footer p{
         height:auto;
         width:auto
     }
-    #navtop ul li{
+    #navtop ul li:hover{
         width:100%;
         margin:0;
     }
