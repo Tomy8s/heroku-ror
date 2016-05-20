@@ -173,6 +173,11 @@ main{
 .blob :last-child{
     margin-bottom: 0;
 }
+.blob h3 small{
+    font-size: 16px;
+    color: #cccccc;
+    font-weight: 300;
+}
 main a:hover{
     text-decoration: underline;
 }

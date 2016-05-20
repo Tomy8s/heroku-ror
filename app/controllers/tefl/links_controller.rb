@@ -12,7 +12,7 @@ class Tefl::LinksController < ApplicationController
   def create
     @new = Tefl.new(tefl_params)
     if @new.save
-        redirect_to tefl_links_index_path
+        redirect_to tefl_links_path
         flash[:notice] = "Thank you. Your link has been added."
       else
         render "new"
@@ -23,12 +23,20 @@ class Tefl::LinksController < ApplicationController
   end
 
   def edit
+    @link = Tefl.find(params[:id])
   end
 
   def show
   end
 
   def update
+    @link = Tefl.find(params[:id])
+    if Tefl.update(tefl_params)
+      redirect_to tefl_links_path
+      flash[:notice] = "Thank you. Your post has been updated."
+    else
+      render "edit"
+    end
   end
   
   private

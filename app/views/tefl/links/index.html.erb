@@ -2,8 +2,8 @@
 
 <% @link.each do |l| %>
   <div class="blob">
-    <h3><%= link_to l.name, l.link %></h3>
-    <%= link_to "Go to site", l.link %>
+    <h3><%= link_to l.name, l.link %><small> <%= link_to "edit", edit_tefl_link_path(l)%> | <%= link_to "delete" %></small></h3>
+    <p><%= link_to "Got to Site", l.link %></p>
     <p><%= l.description %></p>
     <p class="created">Uploaded: <%= l.created_at %></p>
   </div>

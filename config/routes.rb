@@ -35,33 +35,33 @@ Rails.application.routes.draw do
 
   get 'learning/other'
 
-  namespace :tefl do
-  get 'links/index'
-  end
-
-  namespace :tefl do
-  post 'links/create'
-  end
-
-  namespace :tefl do
-  get 'links/new'
-  end
-
-  namespace :tefl do
-  get 'links/destroy'
-  end
-
-  namespace :tefl do
-  get 'links/edit'
-  end
-
-  namespace :tefl do
-  get 'links/show'
-  end
-
-  namespace :tefl do
-  get 'links/update'
-  end
+  #namespace :tefl do
+  #get 'links/index'
+  #end
+  #
+  #namespace :tefl do
+  #post 'links/create'
+  #end
+  #
+  #namespace :tefl do
+  #get 'links/new'
+  #end
+  #
+  #namespace :tefl do
+  #get 'links/destroy'
+  #end
+  #
+  #namespace :tefl do
+  #get 'links/edit'
+  #end
+  #
+  #namespace :tefl do
+  #get 'links/show'
+  #end
+  #
+  #namespace :tefl do
+  #patch 'links/update'
+  #end
 
   get 'projects' => 'projects#index'
 
@@ -90,6 +90,9 @@ Rails.application.routes.draw do
   root 'home#welcome'
   
   resources :users
+  namespace :tefl do
+  resources :links
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
