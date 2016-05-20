@@ -1,40 +1,40 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-main{
+#fourlettertable main{
     font-size: 26px;
 }
 main form{
     line-height: 2em;
     display: block;
 }
-main table{
+#fourlettertable{
     margin: 0 auto;    
 }
-th{
+#fourlettertable th{
     border-radius:10px;
     width: 175px;
     background: #484848;
     color: #FFFFFF;
 }
-td{
+#fourlettertable td{
     border-radius:10px;
     width: 150px;
 }
-.rw{
+#fourlettertable .rw{
     text-align: center;
     background: #D8D800;
 }
-.rr{
+#fourlettertable .rr{
     text-align: center;
     background: #00D800;
 }
-.gu{
+#fourlettertable .gu{
     background:#123456;
     color: #FFFFFF;
     padding-left: 10px;
 }
-main input{
+#fourlettertable main input{
     border: 15px solid #484848;
     border-radius: 15px;
     background-color: #484848;

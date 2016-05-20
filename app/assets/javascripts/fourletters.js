@@ -5,7 +5,6 @@ function play() {
     if (document.getElementById('guess').value.length != 4) {
         alert("Please enter a 4-letter word");
     } else {
-        //var word = "fish";
         var guess = document.getElementById('guess').value.toLowerCase();
         var rw = 0;
         var rr = 0;

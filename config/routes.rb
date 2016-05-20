@@ -35,34 +35,6 @@ Rails.application.routes.draw do
 
   get 'learning/other'
 
-  #namespace :tefl do
-  #get 'links/index'
-  #end
-  #
-  #namespace :tefl do
-  #post 'links/create'
-  #end
-  #
-  #namespace :tefl do
-  #get 'links/new'
-  #end
-  #
-  #namespace :tefl do
-  #get 'links/destroy'
-  #end
-  #
-  #namespace :tefl do
-  #get 'links/edit'
-  #end
-  #
-  #namespace :tefl do
-  #get 'links/show'
-  #end
-  #
-  #namespace :tefl do
-  #patch 'links/update'
-  #end
-
   get 'projects' => 'projects#index'
 
   get 'projects/fourletters'

@@ -20,6 +20,9 @@ class Tefl::LinksController < ApplicationController
   end
 
   def destroy
+    @link = Tefl.find(params[:id])
+    @link.destroy
+    redirect_to tefl_links_path
   end
 
   def edit
