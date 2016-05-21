@@ -6,10 +6,28 @@
 
 <% @course.each do |c| %>
   <div class="blob">
-    <h2><%= link_to c.name, c.link %></h2>
-    <h5>at <%= c.site %></h5>
-    <p><%= c.description %></p>
-    <p>My rating: <%= c.rating %>/5</p>
-    <P>My progress: <%= c.complete %>%</P>
+    <div class="course_title">
+      <h2><%= link_to c.name, c.address %></h2>
+      <h5>by <%= link_to Instructor.find(c.instructor_id).name, Instructor.find(c.instructor_id).profile %> on <%= link_to CoursesSite.find(c.courses_site_id).name, CoursesSite.find(c.courses_site_id).address %></h5>
+    </div>
+    <!--<span class="course_img" style="display:inline;float:left">
+      <%= image_tag(c.img) %>
+    </span>-->
+    <span class="course_body">
+      <p></p><h4>Description</h4>
+      <%= c.description %></p>
+      <p><h4>What I learnt</h4>
+      <%= c.learnt %></p>
+      <p>
+        <span>My rating: <%= c.rating %>/5</span>
+        <span>
+          My progress: <%= c.complete %>%
+          <svg width="416" height="20">
+            <rect width="416" height="21" rx="10" ry="10" style="fill:#EEE" />
+            <rect x="8" y="8" width="<%= c.complete*4 %>" height="5" rx="3" ry="3" style="fill:#<%= (c.complete == 100)? "0F0":(c.complete > 49)? "9B3": "F00" %>;" />
+          </svg>
+        </span>
+      </P>
+    </span>
   </div>
 <% end %>
