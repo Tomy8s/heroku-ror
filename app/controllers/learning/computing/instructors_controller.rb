@@ -13,6 +13,7 @@ class Learning::Computing::InstructorsController < ApplicationController
   end
 
   def edit
+    @inst = Instructor.find(params[:id])
   end
 
   def update

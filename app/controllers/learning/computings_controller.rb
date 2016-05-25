@@ -24,7 +24,7 @@ class Learning::ComputingsController < ApplicationController
   
   def update
     @course = Course.find(params[:id])
-    if Course.update(course_params)
+    if @course.update(course_params)
         flash[:notice] = "Your course has been updated."
         redirect_to learning_computings_path
       else
