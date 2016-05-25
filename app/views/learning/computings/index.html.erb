@@ -7,7 +7,7 @@
 <% @course.each do |c| %>
   <div class="blob">
     <div class="course_title">
-      <h2 style="display:inline"><%= link_to c.name, c.address %></h2> <small style="display:inline"><%= link_to "edit", edit_learning_computing_path(c) %> | <%= link_to "delete", learning_computing_path(c), method: :delete %></small>
+      <h2 style="display:inline"><%= link_to c.name, c.address %></h2> <small style="display:inline"></small>
       <h5>by <%= link_to Instructor.find(c.instructor_id).name, Instructor.find(c.instructor_id).profile %> on <%= link_to CoursesSite.find(c.courses_site_id).name, CoursesSite.find(c.courses_site_id).address %></h5>
     </div>
     <!--<span class="course_img" style="display:inline;float:left">
