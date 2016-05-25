@@ -3,7 +3,6 @@ class LearningController < ApplicationController
   end
 
   def computing
-    @course = Course.all
   end
 
   def other

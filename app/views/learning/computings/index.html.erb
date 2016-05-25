@@ -1,0 +1,48 @@
+<h1>Computing learning</h1>
+
+<P>
+  Below you can find a list of the various different courses I've taken and what I've learnt from them.
+</P>
+
+<% @course.each do |c| %>
+  <div class="blob">
+    <div class="course_title">
+      <h2 style="display:inline"><%= link_to c.name, c.address %></h2> <small style="display:inline"><%= link_to "edit", edit_learning_computing_path(c) %> | <%= link_to "delete", learning_computing_path(c), method: :delete %></small>
+      <h5>by <%= link_to Instructor.find(c.instructor_id).name, Instructor.find(c.instructor_id).profile %> on <%= link_to CoursesSite.find(c.courses_site_id).name, CoursesSite.find(c.courses_site_id).address %></h5>
+    </div>
+    <!--<span class="course_img" style="display:inline;float:left">
+      <%= image_tag(c.img) %>
+    </span>-->
+    <span class="course_body">
+      <p></p><h4>Description</h4>
+      <%= c.description %></p>
+      <p><h4>What I learnt</h4>
+      <%= c.learnt %></p>
+      <p>
+        <span>My rating: <%= c.rating %>/5</span>
+        <span>
+          My progress: <%= c.complete %>%
+          <svg width="416" height="20">
+            <rect width="416" height="21" rx="10" ry="10" style="fill:#EEE" />
+            <rect x="8" y="8" width="<%= c.complete*4 %>" height="5" rx="3" ry="3" style="fill:#<%= (c.complete == 100)? "0F0":(c.complete > 49)? "9B3": "F00" %>;" />
+          </svg>
+        </span>
+      </P>
+    </span>
+  </div>
+<% end %>
+<h1>Add a course</h1>
+<%= form_for @new, url: {action: "create"}, html: {class: "blob"} do |f| %>
+<table>
+  <tr><td>Name of course:</td><td><%= f.text_field :name %></td></tr>
+  <tr><td>Course address:</td><td><%= f.text_field :address %></td></tr>
+  <tr><td>On:</td><td><%= f.collection_select :courses_site_id, @site.order(:name), :id, :name, include_blank: true %></td></tr>
+  <tr><td>By:</td><td><%= f.collection_select :instructor_id, @inst.order(:name), :id, :name, include_blank: true %></td></tr>
+  <tr><td>Description:</td><td><%= f.text_area :description %></td></tr>
+  <tr><td>Learnt:</td><td><%= f.text_area :learnt %></td></tr>
+  <tr><td>Course rating:</td><td><%= f.number_field :rating %></td></tr>
+  <tr><td>Course progress:</td><td><%= f.number_field :complete %></td></tr>
+  <tr><td>Image:</td><td><%= f.text_field :img %></td></tr>
+</table>
+  <%= f.submit "Add link" %>
+<% end %>

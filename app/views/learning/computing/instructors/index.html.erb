@@ -1,0 +1,18 @@
+<h1>Learning::Computing::Instructors#index</h1>
+<table>
+  <thead>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Profile address</td>
+  </thead>
+  <%= form_for @new, url: {action:"create"} do |f| %>
+  <tr><td>New:</td><td><%= f.text_field :name %></td><td><%= f.text_field :profile %><%= f.submit %></td></tr>
+  <% end %>
+  <% @inst.each do |i| %>
+  <tr>
+    <td><%= i.id %></td>
+    <td><%= i.name %></td>
+    <td><%= i.profile %></td>
+  </tr>
+  <% end %>
+</table>

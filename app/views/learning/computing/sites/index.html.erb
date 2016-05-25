@@ -1,0 +1,18 @@
+<h1>Learning::Computing::Sites#index</h1>
+<table>
+  <thead>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Address</td>
+  </thead>
+  <%= form_for @new, url: {action:"create"} do |f| %>
+  <tr><td>New:</td><td><%= f.text_field :name %></td><td><%= f.text_field :address %><%= f.submit %></td></tr>
+  <% end %>
+  <% @site.each do |i| %>
+  <tr>
+    <td><%= i.id %></td>
+    <td><%= i.name %></td>
+    <td><%= i.address %></td>
+  </tr>
+  <% end %>
+</table>

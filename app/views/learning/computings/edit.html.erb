@@ -1,0 +1,15 @@
+<h1 style="display:inline">Edit <%= @course.name %></h1>&nbsp;|&nbsp;<small><%= link_to "delete", learning_computing_path(@course.id), method: :delete %></small>
+<%= form_for @course, url: {action: "update"}, html: {class: "blob"} do |f| %>
+<table>
+  <tr><td>Name of course:</td><td><%= f.text_field :name %></td></tr>
+  <tr><td>Course address:</td><td><%= f.text_field :address %></td></tr>
+  <tr><td>On:</td><td><%= f.collection_select :courses_site_id, @site.order(:name), :id, :name, include_blank: true %></td></tr>
+  <tr><td>By:</td><td><%= f.collection_select :instructor_id, @inst.order(:name), :id, :name, include_blank: true %></td></tr>
+  <tr><td>Description:</td><td><%= f.text_area :description %></td></tr>
+  <tr><td>Learnt:</td><td><%= f.text_area :learnt %></td></tr>
+  <tr><td>Course rating:</td><td><%= f.number_field :rating %></td></tr>
+  <tr><td>Course progress:</td><td><%= f.number_field :complete %></td></tr>
+  <tr><td>Image:</td><td><%= f.text_field :img %></td></tr>
+</table>
+  <%= f.submit "Add link" %>
+<% end %>

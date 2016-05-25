@@ -1,37 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/admin'
-  
-  get 'users/login'
-  
-  get 'users/loggingin'
-  
-  get 'users/profile'
-  
-  get 'users/register'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
-  get 'users/activity'
-
-  get 'users/profile'
-
-  get 'users/activity'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/delete'
 
   get 'about' => 'about#about'
 
   get 'learning/academia'
-
-  get 'learning/computing'
 
   get 'learning/other'
 
@@ -39,31 +10,21 @@ Rails.application.routes.draw do
 
   get 'projects/fourletters'
 
-  get 'posts/create'
-
-  get 'posts/edit'
-
-  get 'posts/update'
-
-  get 'posts/show'
-
-  get 'posts/index'
-
-  get 'posts/create'
-
-  get 'posts/edit'
-
-  get 'posts/update'
-
-  get 'posts/show'
-
   get 'home/welcome'
   
   root 'home#welcome'
   
+  namespace :learning do
+    namespace :computing do
+      resources :instructors, :sites
+    end
+    resources :computings
+  end
+  
   resources :users
+  
   namespace :tefl do
-  resources :links
+    resources :links
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
