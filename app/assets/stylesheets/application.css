@@ -301,6 +301,11 @@ footer p{
     main{
         margin-top:0;
     }
+    main input, textarea, button{
+        width: 150px;
+        border: 15px solid #484848;
+        border-radius: 15px;
+    }
 }
 @media (max-width: 375px){
     #user{
