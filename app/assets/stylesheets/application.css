@@ -160,24 +160,6 @@ h1{
 main{
     margin-bottom:50px;
 }
-main .blob{
-    padding: 10px;
-    border-radius: 15px;
-    background:linear-gradient(#123456, #9F9FA3);
-    color: #FFFFFF;
-    margin: 5px;
-}
-main .blob :first-child{
-    margin-top: 0;
-}
-main .blob :last-child{
-    margin-bottom: 0;
-}
-main .blob h3 small{
-    font-size: 16px;
-    color: #cccccc;
-    font-weight: 300;
-}
 main a:hover{
     text-decoration: underline;
 }
@@ -197,6 +179,24 @@ main input, textarea, button{
     border-radius: 15px;
     background-color: #484848;
     color: #FFFFFF;  
+}
+main .blob{
+    padding: 10px;
+    border-radius: 15px;
+    background:linear-gradient(#123456, #9F9FA3);
+    color: #FFFFFF;
+    margin: 5px;
+}
+main .blob :first-child{
+    margin-top: 0;
+}
+main .blob :last-child{
+    margin-bottom: 0;
+}
+main .blob h3 small{
+    font-size: 16px;
+    color: #cccccc;
+    font-weight: 300;
 }
 main .blob input, textarea, select{
     border: 15px solid #FFFFFF;
@@ -309,8 +309,6 @@ footer p{
     }
     main input, textarea, button{
         width: 150px;
-        border: 15px solid #484848;
-        border-radius: 15px;
     }
     main .progmob{
         display:inline;
@@ -318,6 +316,12 @@ footer p{
     }
     main .progpc{
         display:none;
+    }
+    main .nomob{
+        display:none;
+    }
+    main .blob input[submit]{
+        color:#484848;
     }
 }
 @media (max-width: 375px){
