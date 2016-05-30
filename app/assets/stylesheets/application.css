@@ -217,6 +217,12 @@ main input[type=radio]{
     width: 26px;
     height: 26px;
 }
+main .progmob{
+    display:none;
+}
+main .progpc{
+    display:inline;
+}
 main #submit, button{
     width: 150px;
     margin: 0 auto;
@@ -305,6 +311,13 @@ footer p{
         width: 150px;
         border: 15px solid #484848;
         border-radius: 15px;
+    }
+    main .progmob{
+        display:inline;
+        /*margin:auto;*/
+    }
+    main .progpc{
+        display:none;
     }
 }
 @media (max-width: 375px){
