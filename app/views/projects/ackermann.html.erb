@@ -1,0 +1,74 @@
+<h1>The Ackermann Algorithm</h1>
+
+<h3>The algorithm (in Ruby)</h3>
+
+<pre>
+  def ack(m, n)
+    if m == 0
+      n + 1
+    elsif n == 0
+      ack(m - 1, 1)
+    else
+      ack(m - 1, ack(m, n - 1))
+    end
+  end
+</pre>
+
+<p>Large values can result in a lot of processing, so please only enter values from the table below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <td>n/m</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5+</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:red"></td>
+    </tr>
+    <tr>
+      <td>1-9</td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+    </tr>
+    <tr>
+      <td>10-1000</td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:green"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+    </tr>
+    <tr>
+      <td>1001+</td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+      <td style="background:red"></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= form_for @ack do |f| %>
+  <%= f.text_field :m %>
+  <%= f.text_field :n %>
+<% end %>

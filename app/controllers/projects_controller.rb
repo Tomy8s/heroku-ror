@@ -1,16 +1,14 @@
 class ProjectsController < ApplicationController
-  def index
+  def ackermann
+    @m = Ackermann.m
+    @n = Ackermann.n
+    
+    @ans = "Ackermann \(#{@m}, #{@n}\) is ."
   end
 
-  def fourletters
+  def fizzbuzz
   end
 
-  def calendar
-  end
-
-  def gameoflife
-  end
-
-  def maths
+  def pythagorus
   end
 end

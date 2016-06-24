@@ -1,28 +1,18 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
+  test "should get ackermann" do
+    get :ackermann
     assert_response :success
   end
 
-  test "should get fourletters" do
-    get :fourletters
+  test "should get fizzbuzz" do
+    get :fizzbuzz
     assert_response :success
   end
 
-  test "should get calendar" do
-    get :calendar
-    assert_response :success
-  end
-
-  test "should get gameoflife" do
-    get :gameoflife
-    assert_response :success
-  end
-
-  test "should get maths" do
-    get :maths
+  test "should get pythagorus" do
+    get :pythagorus
     assert_response :success
   end
 

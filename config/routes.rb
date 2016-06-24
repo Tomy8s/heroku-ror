@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
 
-  get 'about' => 'about#about'
+  get 'projects/ackermann'
+
+  get 'projects/fizzbuzz'
+
+  get 'projects/pythagorus'
+
+  get 'about/about' => 'about#about'
 
   get 'learning/academia'
 
   get 'learning/other'
 
-  get 'projects' => 'projects#index'
+  get 'projects/index' => 'projects#index'
 
   get 'projects/fourletters'
 
