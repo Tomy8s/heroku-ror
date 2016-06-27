@@ -46,7 +46,4 @@ class Tefl::LinksController < ApplicationController
   def tefl_params
     params.require(:tefl).permit(:id, :user_id, :name, :link, :description, :visited, :created_at, :commit)
   end
-  def user_params
-    params.require(:user).permit(:id, :fname, :sname)
-  end
 end

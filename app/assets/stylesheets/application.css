@@ -284,7 +284,11 @@ footer{
     bottom:0;
 }
 footer p{
-    text-align:center;
+    text-align: center;
+    vertical-align: center;
+}
+footer a:hover{
+    text-decoration: underline;
 }
 .mob{
     display:none;
