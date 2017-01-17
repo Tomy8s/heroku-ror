@@ -1,4 +1,4 @@
-$(document).on('page:load', function(){
+var weatherControl = function(){
 
   var showWeather = function() {
     if($("#city").val() === ""){
@@ -19,4 +19,6 @@ $(document).on('page:load', function(){
     });
     showWeather();
   });
-});
+};
+$(document).ready(weatherControl);
+$(document).on('page:load', weatherControl);

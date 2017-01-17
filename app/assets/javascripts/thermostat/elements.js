@@ -1,9 +1,10 @@
-$(document).on('page:load', function() {
+var thermostatControl = function() {
   var thermostat = new Thermostat();
   var update = function() {
     $("#temperature_display").val(thermostat.temperature());
     $("#temperature_display").css("background-color", thermostat.screenColour());
     $("#temperatureSlider").val(thermostat.temperature());
+    // $.post('/update', { temperature: thermostat.temperature(), power_saving: thermostat.powerSaving()});
   };
 
   update();
@@ -40,6 +41,6 @@ $(document).on('page:load', function() {
     $( "#psm_toggle_button" ).html( "Turn PowerSaving " + notStatus );
     update();
   });
-
-
-});
+};
+$(document).ready(thermostatControl);
+$(document).on('page:load', thermostatControl);
