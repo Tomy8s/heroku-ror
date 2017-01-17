@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require fourletters
 //= require ganalytics
+//= require_tree ./thermostat

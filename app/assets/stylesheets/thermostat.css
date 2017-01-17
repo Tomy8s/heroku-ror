@@ -1,0 +1,51 @@
+#thermostat{
+  width: 350px;
+  margin: auto;
+  font-family: 'Pontano Sans', sans-serif;
+  color: grey;
+}
+
+#thermostat textarea{
+  margin-top: 20px;
+  resize:none;
+  padding: 20px;
+  font-size: 32px;
+  text-align: center;
+  border-radius: 10px;
+  border-width: 1px
+}
+
+#thermostat button, input[type="text"]{
+  border: 0 solid black;
+  border-radius: 0;
+} 
+
+#thermostat input[type="text"]{
+  color: grey;
+}
+
+#thermostat #reset_button{
+  margin: auto;
+}
+
+#thermostat button{
+  align: center
+}
+
+#thermostat p{
+  margin: 5px;
+  align: center
+}
+
+#thermostat label{
+  margin: 5px;
+}
+
+#thermostat #city{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: grey;
+  padding: 0;
+  background-color: inherit;
+}
