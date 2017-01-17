@@ -42,12 +42,6 @@ ActiveRecord::Schema.define(version: 20160607181151) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", id: false, force: :cascade do |t|
-    t.date   "date",                   null: false
-    t.string "name",        limit: 50, null: false
-    t.text   "description"
-  end
-
   create_table "instructors", force: :cascade do |t|
     t.string   "name"
     t.string   "profile"
