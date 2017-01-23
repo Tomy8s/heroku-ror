@@ -278,6 +278,15 @@ main .question{
     display: block;
     width: auto;
 }
+main #projects{
+    width: 80%;
+    margin: auto;
+}
+main .project{
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+}
 footer{
     background:linear-gradient(#fff, #F1F1F4) fixed;
     width:100%;
