@@ -17,7 +17,7 @@
                 <%= link_to image_tag(p.image_url, width: "250", style: "margin: 0 25"), p.live_url %>
                 <a href="<%= p.live_url %>"><h3><%= p.name %></h3></a>
                 <a href="<%= p.repo_url %>"><p>See the code</p></a>
-                <p>Main technologies used: <% p.tech.each do |t| %>
+                <p>Built on: <% p.tech.each do |t| %>
                     <%= image_tag(@techs.find_by(name: t).image_url, height: "24") %>
                 <% end %></p>
                 <p><%= p.description %></p>
