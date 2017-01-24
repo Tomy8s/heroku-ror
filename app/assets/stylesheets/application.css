@@ -290,7 +290,7 @@ main .project{
 main .project-image{
     display: block;
     max-width: 250px;
-    max-height: 250px;
+    max-height: 150px;
     width: auto;
     height: auto;
     margin: auto;
