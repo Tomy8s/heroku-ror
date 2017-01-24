@@ -21,4 +21,4 @@ var weatherControl = function(){
   });
 };
 $(document).ready(weatherControl);
-$(document).on('page:load', weatherControl);
+$(document).on('page:change', weatherControl);
