@@ -279,14 +279,13 @@ main .question{
     width: auto;
 }
 main #projects{
-    width: 90%;
+    width: 80%;
     margin: auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
 main .project{
+    display: inline-block;
     width: 250px;
+    margin: 10px;
 }
 main .project-image{
     display: block;
