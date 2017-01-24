@@ -287,6 +287,14 @@ main .project{
     width: 250px;
     margin: 10px;
 }
+main .project-image{
+    display: block;
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
 footer{
     background:linear-gradient(#fff, #F1F1F4) fixed;
     width:100%;
