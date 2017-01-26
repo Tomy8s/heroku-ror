@@ -29,6 +29,15 @@ Rails.application.routes.draw do
     resources :links
   end
 
+  namespace :instakilo do
+    root 'posts#index'
+    resources :posts do 
+      resources :comments
+      resources :likes
+      resources :dislikes
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
