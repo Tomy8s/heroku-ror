@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123134052) do
+ActiveRecord::Schema.define(version: 20170201112719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 20170123134052) do
   end
 
   create_table "tefls", force: :cascade do |t|
-    t.integer  "user_id"
     t.string   "link"
     t.text     "description"
     t.integer  "visited"
@@ -77,23 +76,6 @@ ActiveRecord::Schema.define(version: 20170123134052) do
     t.string   "name"
   end
 
-  add_index "tefls", ["user_id"], name: "index_tefls_on_user_id", using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.string   "fname"
-    t.string   "sname"
-    t.string   "password_digest"
-    t.string   "salt"
-    t.date     "dob"
-    t.string   "gender"
-    t.string   "status"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "email"
-    t.string   "uname"
-  end
-
   add_foreign_key "courses", "courses_sites"
   add_foreign_key "courses", "instructors"
-  add_foreign_key "tefls", "users"
 end
