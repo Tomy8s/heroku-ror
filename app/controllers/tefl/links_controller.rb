@@ -1,7 +1,6 @@
 class Tefl::LinksController < ApplicationController
   def index
     @link = Tefl.all
-    @user = User.all
     @new = Tefl.new
   end
 
