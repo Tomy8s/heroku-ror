@@ -16,3 +16,4 @@
 //= require fourletters
 //= require ganalytics
 //= require_tree ./thermostat
+//= require_tree ./bowling
