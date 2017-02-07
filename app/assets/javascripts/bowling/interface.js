@@ -8,4 +8,4 @@ var bowlingControl = function() {
   });
 };
 $(document).ready(bowlingControl);
-$(document).on('page:change', bowlingControl);
+$(document).on('page:load', bowlingControl);
