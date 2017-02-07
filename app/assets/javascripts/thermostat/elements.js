@@ -43,4 +43,4 @@ var thermostatControl = function() {
   });
 };
 $(document).ready(thermostatControl);
-$(document).on('page:change', thermostatControl);
+$(document).on('turbolinks:load', thermostatControl);
