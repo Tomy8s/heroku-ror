@@ -3,16 +3,13 @@ Rails.application.routes.draw do
   get 'about/about' => 'about#about'
 
   get 'learning/academia'
-
   get 'learning/other'
 
   get 'projects/index' => 'projects#index'
-
   get 'projects/fourletters'
-
   get 'projects/thermostat'
-
   get 'projects/bowling'
+  get 'projects/target-pay'
 
   get 'home/welcome'
   
